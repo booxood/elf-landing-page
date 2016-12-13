@@ -1,5 +1,6 @@
 @import "~normalize.css/normalize.css";
 @import "./const.scss";
+@import "./loader.css";
 body {
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
@@ -13,16 +14,6 @@ html {
 .container {
   width: 960px;
   margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  html {
-    min-width: 768px;
-  }
-  .container {
-    width: 420px;
-    margin: 0 auto;
-  }
 }
 
 .header {
@@ -45,7 +36,6 @@ html {
         display: table-cell;
         vertical-align: middle;
         transition: height .5s;
-
         &:hover {
           cursor: pointer;
         }
@@ -79,6 +69,21 @@ html {
           }
         }
       }
+      .menu {
+        display: table-cell;
+        vertical-align: middle;
+        display: none;
+        width: 24px;
+        height: 90px;
+        background-color: transparent;
+        background-image: url(../img/mobile-navigation.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px 14px;
+        border: none;
+        cursor: pointer;
+        transition: height .5s;
+      }
     }
   }
   &.nav-collapse {
@@ -94,6 +99,9 @@ html {
     }
     .nav-right {
       .navbar {
+        height: 60px;
+      }
+      .menu {
         height: 60px;
       }
     }
@@ -119,27 +127,30 @@ html {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, #000 100%)
   }
   .hero-cover {
-    margin-top: 280px;
+    margin-top: 210px;
     float: left;
     position: relative;
     width: (900px/1.2);
     height: (467px/1.2);
     background: url(../img/cover.png) no-repeat;
     background-size: cover;
+    background-position-x: -5px;
   }
   .hero-info {
     position: absolute;
     right: 0;
     margin-right: -120px;
-    margin-top: 20px;
+    margin-top: 80px;
     color: white;
     .hero-info-title {
       font-size: 50px;
+      font-weight: $thin;
       line-height: 50px;
       text-transform: uppercase;
     }
     .hero-info-desc {
       font-size: 18px;
+      font-weight: $ultralight;
       line-height: 48px;
       margin: 10px auto 40px;
     }
@@ -159,6 +170,11 @@ html {
           background-position: center;
           background-size: 32px;
           border-radius: 72px;
+          a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+          }
           &:hover {
             background-color: rgba(0, 0, 0, .5);
           }
@@ -205,6 +221,15 @@ html {
     padding: 0 15px;
     border: none;
     box-sizing: border-box;
+    &-click {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        .section-item-title {
+          color: $blue;
+        }
+      }
+    }
     &-img {
       width: 90px;
       height: 90px;
@@ -220,9 +245,14 @@ html {
       }
     }
     &-title {
+      display: block;
+      text-decoration: none;
       font-size: 18px;
       font-weight: $thin;
       text-align: center;
+      &:visited {
+        color: black;
+      }
       &-tag {
         position: relative;
         &:after {
@@ -232,6 +262,7 @@ html {
           left: -20px;
           width: 60px;
           font-size: 18px;
+          color: black;
           border: 1px solid #000;
           padding: 2px 4px;
           border-radius: 18px;
@@ -279,8 +310,94 @@ html {
     width: 280px;
     float: left;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    &:visited {
+      color: black;
+    }
+    &-win {
+      position: relative;
+      width: 280px;
+      height: 499px;
+      overflow: hidden;
+      &:hover {
+        .example-item-float {
+          top: 0px;
+          transition: top .6s;
+        }
+      }
+      .npm-version {
+        position: absolute;
+        top: 285px;
+        left: 86px;
+        transform: scale(0.7);
+      }
+    }
+    &-float {
+      position: absolute;
+      left: 0;
+      top: 499px;
+      width: 100%;
+      height: 100%;
+      padding: 40px 40px 0;
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, .2);
+      background-color: white;
+      transition: top .6s;
+    }
+    &-qr {
+      margin-bottom: 20px;
+    }
+    &-desc {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: $ultralight;
+      word-break: break-all;
+    }
+    &-command {
+      margin-bottom: 30px;
+      width: 200px;
+      height: 42px;
+      line-height: 42px;
+      background-color: #DDDDDD;
+      color: #4A4A4A;
+      font-size: 16px;
+      font-weight: $thin;
+      &:before {
+        content: " ";
+        position: absolute;
+        display: inline-block;
+        width: 4px;
+        height: 42px;
+        background-color: $blue;
+      }
+      span {
+        margin-left: 20px;
+        margin-right: 10px;
+        color: #EB6F6C;
+      }
+    }
+    &-open {
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid #4A4A4A;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: $thin;
+      text-align: center;
+      img {
+        vertical-align: middle;
+        width: 12px;
+        height: 12px;
+      }
+    }
     &-img {
       width: 280px;
+      height: 499px;
     }
     &-title {
       margin: 20px 0 0;
@@ -359,5 +476,85 @@ html {
   }
   &-words {
     opacity: .5;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    min-width: 320px;
+  }
+  .container {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .header {
+    .nav {
+      .nav-right {
+        .navbar {
+          opacity: 0;
+          text-align: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          transition: all .5s;
+          li {
+            display: none;
+            margin: 0;
+            padding: 8px;
+            font-size: 18px;
+          }
+          &.open {
+            display: block;
+            padding-top: 220px;
+            opacity: 1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 1);
+            transition: all .5s;
+            li {
+              display: block;
+            }
+          }
+        }
+        .menu {
+          display: block;
+        }
+      }
+    }
+  }
+  #hero {
+    .hero-cover {
+      background-image: none;
+      // margin-top: 280px;
+      width: 100%;
+      .hero-info {
+        position: relative;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+  .section {
+    &-item {
+      width: 280px;
+      margin-bottom: 40px;
+    }
+  }
+  .example {
+    .example-item-list {
+      .example-item {
+        margin: 0 auto 40px;
+        text-align: center;
+        width: 100%;
+        .example-item-win {
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }

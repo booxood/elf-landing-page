@@ -1534,6 +1534,10 @@ jquery:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
 
+jquery-qrcode@booxood/jquery-qrcode:
+  version "1.0.0"
+  resolved "https://codeload.github.com/booxood/jquery-qrcode/tar.gz/71cebb7856387b00876f45beed6f8c51f8f62ebf"
+
 js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -2472,6 +2476,10 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.1.2"
 
+preloader.js@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/preloader.js/-/preloader.js-1.0.0.tgz#e1cd3bcd8ee1194902a91f64bdfdf6490e4d9059"
+
 prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
@@ -3305,6 +3313,10 @@ watchpack@^0.2.1:
     async "^0.9.0"
     chokidar "^1.0.0"
     graceful-fs "^4.1.2"
+
+waypoints@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/waypoints/-/waypoints-4.0.1.tgz#09979a0573810b29627cba4366a284a062ec69c8"
 
 webpack:
   version "1.14.0"
