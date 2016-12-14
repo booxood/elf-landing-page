@@ -15,7 +15,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].bundle.js'
+    filename: '[name]-[hash:6].bundle.js'
   },
   module: {
     loaders: [{
@@ -36,7 +36,7 @@ module.exports = {
       test: /\.(svg|png|jpe?g|jpg|gif)(\?\S*)?$/,
       exclude: /node_modules/,
       loaders: [
-        'url-loader?limit=1&name=img/[name].[ext]'
+        'url-loader?limit=1&name=img/[name]-[hash:6].[ext]'
       ]
     }, {
       test: /\.html$/,
@@ -46,11 +46,14 @@ module.exports = {
     }]
   },
   plugins: [
-    new FaviconsWebpackPlugin(path.join(ROOT, 'src/img/logo.png')),
+    new FaviconsWebpackPlugin({
+      logo: path.join(ROOT, 'src/img/logo.png'),
+      prefix: 'favicons-[hash:6]/'
+    }),
     new HtmlWebpackPlugin({
       template: path.join(ROOT, 'src/index.html')
     }),
-    new ExtractTextPlugin("css/app.css", {
+    new ExtractTextPlugin("css/app-[hash:6].css", {
       allChunks: true
     }),
     new webpack.optimize.UglifyJsPlugin({
