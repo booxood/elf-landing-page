@@ -517,10 +517,10 @@ html {
 
 @media (max-width: 768px) {
   html {
-    min-width: 320px;
+    min-width: 480px;
   }
   .container {
-    width: 320px;
+    width: 480px;
     margin: 0 auto;
   }
   .header {
@@ -577,10 +577,24 @@ html {
   }
   .section {
     &-item {
-      width: 280px;
+      // width: 280px;
+      width: 100%;
       margin-bottom: 40px;
     }
   }
+  .usage {
+    &-command {
+      margin: 0;
+      padding: 20px 5px;
+    }
+  }
+
+  .about {
+    &-desc {
+      padding: 0;
+    }
+  }
+
   .example {
     .example-item-list {
       .example-item {
@@ -592,5 +606,32 @@ html {
         }
       }
     }
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    min-width: 380px;
+  }
+  .container {
+    width: 380px;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    min-width: 340px;
+  }
+  .container {
+    width: 340px;
+  }
+}
+
+@media (max-width: 340px) {
+  html {
+    min-width: 300px;
+  }
+  .container {
+    width: 300px;
   }
 }
