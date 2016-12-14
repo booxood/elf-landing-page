@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer')
 const ROOT = path.resolve(__dirname)
 
 module.exports = {
-  devtool: 'eval-source-map',
+  // devtool: 'eval',
   entry: [
     path.join(ROOT, 'src/js/main.js')
   ],
