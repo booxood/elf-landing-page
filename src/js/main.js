@@ -9,8 +9,8 @@ var Preloader = require('preloader.js')
 var preloader = new Preloader({
   attr: 'preload',
   resources: [
-    'img/banner-bg.jpg',
-    'img/cover.png',
+    './img/banner-bg.jpg',
+    './img/cover.png',
   ],
   perMinTime: 500,
   concurrency: 4

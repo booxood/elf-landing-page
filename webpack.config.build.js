@@ -14,7 +14,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: './',
     filename: '[name]-[hash:6].bundle.js'
   },
   module: {
@@ -36,7 +36,7 @@ module.exports = {
       test: /\.(svg|png|jpe?g|jpg|gif)(\?\S*)?$/,
       exclude: /node_modules/,
       loaders: [
-        'url-loader?limit=1&name=img/[name]-[hash:6].[ext]'
+        'url-loader?limit=1&name=img/[name].[ext]?[hash:6]'
       ]
     }, {
       test: /\.html$/,
@@ -53,7 +53,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(ROOT, 'src/index.html')
     }),
-    new ExtractTextPlugin("css/app-[hash:6].css", {
+    new ExtractTextPlugin("app-[hash:6].css", {
       allChunks: true
     }),
     new webpack.optimize.UglifyJsPlugin({
