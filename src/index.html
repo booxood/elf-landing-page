@@ -27,6 +27,7 @@
         <div class="nav-right">
           <ul class="navbar">
             <li data-url="hero" class="active">首页</li>
+            <li data-url="usage">使用</li>
             <li data-url="about">关于</li>
             <li data-url="feature">特性</li>
             <li data-url="component">组件</li>
@@ -66,12 +67,56 @@
       </div>
     </section>
     <!-- section -->
+    <!-- usage section -->
+    <section class="usage section" id="usage">
+      <div class="container">
+        <div class="section-title">使用</div>
+        <div class="section-devider"></div>
+        <div class="usage-command">
+          <div class="usage-command-block">
+            <p class="usage-command-note">
+              <span>#</span> Step 1，安装 elf-cli
+            </p>
+            <p class="usage-command-line">
+              <span>$</span> npm i -g elf-cli
+            </p>
+          </div>
+          <div class="usage-command-block">
+            <p class="usage-command-note">
+              <span>#</span> Step 2，创建项目目录
+            </p>
+            <p class="usage-command-line">
+              <span>$</span> mkdir demo && cd demo
+            </p>
+          </div>
+
+          <div class="usage-command-block">
+            <p class="usage-command-note">
+              <span>#</span> Step 3，执行「elf init -c 案例名」基于指定模板初始化项目，可执行「elf list」查看所有模板，默认 base
+            </p>
+            <p class="usage-command-line">
+              <span>$</span> elf init -c swiper
+            </p>
+          </div>
+
+          <div class="usage-command-block">
+            <p class="usage-command-note">
+              <span>#</span> Step 4，安装依赖并运行（如果安装 phantomjs 和 node-sass 很慢，可参考 README 设置）
+            </p>
+            <p class="usage-command-line">
+              <span>$</span> npm i && npm start
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section -->
     <!-- about section -->
     <section class="about section" id="about">
       <div class="container">
         <div class="section-title">关于</div>
         <div class="section-devider"></div>
-        <p class="about-desc">ELF是凹凸实验室出品的一套面向开发者的灵活可扩展的HTML5多场景应用模板，可用来制作各种HTML5场景营销活动页面；它基于Webpack进行自动化构建，目前共有 4 个组件以及 4 个官方案例模板；利用ELF提供的命令行工具elf-cli，开发者可自由通过模板和组件的组合来快速定制开发HTML5场景应用。</p>
+        <p class="about-desc">ELF是凹凸实验室出品的一套面向开发者的灵活可扩展的 HTML5 多场景应用模板，可用来制作各种 HTML5 场景营销活动页面；它基于 Webpack 进行自动化构建，目前共有 4 个组件以及 4 个官方案例模板；利用 ELF 提供的命令行工具 elf-cli，开发者可自由通过模板和组件的组合来快速定制开发 HTML5 场景应用。</p>
       </div>
     </section>
     <!-- section -->
@@ -130,6 +175,13 @@
               <div class="section-item-img"><img src="img/icons/swipe.svg" /></div>
               <p class="section-item-title">swiper<span class="section-item-title-tag"></span></p>
               <p class="section-item-desc">强大好用的滚屏组件</p>
+            </a>
+          </li>
+          <li class="section-item">
+            <a class="section-item-click" href="https://github.com/juliangarnier/anime" target="_blank">
+              <div class="section-item-img"><img src="img/icons/animate.svg" /></div>
+              <p class="section-item-title">anime<span class="section-item-title-tag"></span></p>
+              <p class="section-item-desc">JS 动效组件</p>
             </a>
           </li>
         </ul>

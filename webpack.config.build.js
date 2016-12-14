@@ -13,7 +13,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/elf/',
+    publicPath: '/',
     filename: '[name].bundle.js'
   },
   module: {
