@@ -3,6 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
   // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const autoprefixer = require('autoprefixer')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const ROOT = path.resolve(__dirname)
 
@@ -45,6 +46,7 @@ module.exports = {
     }]
   },
   plugins: [
+    new FaviconsWebpackPlugin(path.join(ROOT, 'src/img/logo.png')),
     new HtmlWebpackPlugin({
       template: path.join(ROOT, 'src/index.html')
     })
