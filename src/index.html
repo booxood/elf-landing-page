@@ -3,12 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ELF - HTML5 Boilerplate</title>
-  <meta name="description" content="「灵活可扩展的HTML5多场景应用模板」">
-  <meta name="keywords" content="HTML5 boilerplate code generate aotu.io">
+  <title>ELF - HTML5 Boilerplate | HTML5多场景应用模板</title>
+  <meta name="description" content="一套面向开发者的灵活可扩展的HTML5多场景应用模板，可用来制作各种HTML5多场景营销活动页面">
+  <meta name="keywords" content="ELF, HTML5模板, HTML5脚手架, HTML5 Boilerplate, elf-cli, 凹凸实验室, Aotu, 前端开发, 全栈开发, IOS开发, Android开发">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- styles -->
 </head>
 
 <body>
@@ -72,12 +71,22 @@
         <div class="usage-command">
           <div class="usage-command-block">
             <p class="usage-command-note">
-              <span>#</span> Step 1，安装 elf-cli
+              <span>#</span> Step 1，安装 elf-cli
             </p>
             <p class="usage-command-line">
-              <span>$</span> npm i -g elf-cli
+              <span>$</span> npm install -g elf-cli
             </p>
           </div>
+
+          <div class="usage-command-block">
+            <p class="usage-command-note">
+              <span>#</span> 依赖的包比较多，安装非常耗时，推荐下面这行命令进行安装
+            </p>
+            <p class="usage-command-line">
+              <span>$</span> SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/ npm install -g elf-cli --registry=https://registry.npm.taobao.org
+            </p>
+          </div>
+
           <div class="usage-command-block">
             <p class="usage-command-note">
               <span>#</span> Step 2，创建项目目录
@@ -89,16 +98,16 @@
 
           <div class="usage-command-block">
             <p class="usage-command-note">
-              <span>#</span> Step 3，执行「elf init -c 案例名」基于指定模板初始化项目，可执行「elf list」查看所有模板，默认 base
+              <span>#</span> Step 3，执行「elf init -t 案例名」基于指定模板初始化项目，可执行「elf list」查看所有模板，默认 base
             </p>
             <p class="usage-command-line">
-              <span>$</span> elf init -c swiper
+              <span>$</span> elf init -t swiper
             </p>
           </div>
 
           <div class="usage-command-block">
             <p class="usage-command-note">
-              <span>#</span> Step 4，安装依赖并运行（如果安装 phantomjs 和 node-sass 很慢，可参考 README 设置）
+              <span>#</span> Step 4，安装依赖并运行
             </p>
             <p class="usage-command-line">
               <span>$</span> npm i && npm start
