@@ -75,7 +75,7 @@ function loadOver() {
   $('.section, #hero, #subscribe').waypoint({
     handler: function (direction) {
       if (direction === 'up') return
-      console.log('waypoint direction:', direction, this.element.id)
+      // console.log('waypoint direction:', direction, this.element.id)
       var id = this.element.id
 
       $navbar.find('li').removeClass('active')
@@ -86,7 +86,7 @@ function loadOver() {
   $('.section, #hero, #subscribe').waypoint({
     handler: function (direction) {
       if (direction === 'down') return
-      console.log('waypoint direction:', direction, this.element.id)
+      // console.log('waypoint direction:', direction, this.element.id)
       var id = this.element.id
 
       $navbar.find('li').removeClass('active')

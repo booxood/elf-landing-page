@@ -11,6 +11,10 @@ html {
   min-width: 960px;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -319,6 +323,7 @@ html {
     &-line {
       color: white;
       font-size: 16px;
+      word-break: break-all;
       span {
         color: #FF8C80;
         font-size: 14px;
