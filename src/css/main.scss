@@ -27,7 +27,8 @@ html {
   width: 100%;
   z-index: 1;
   background: transparent;
-  color: white;
+  color: black;
+  font-weight: 600;
   transition: background .5s;
   .nav {
     @include clearfix;
@@ -36,10 +37,11 @@ html {
     .nav-left {
       float: left;
       .logo {
+        opacity: 0;
         height: 90px;
         display: table-cell;
         vertical-align: middle;
-        transition: height .5s;
+        transition: all .5s;
         &:hover {
           cursor: pointer;
         }
@@ -63,7 +65,7 @@ html {
         vertical-align: middle;
         transition: height .5s;
         &>li {
-          margin-left: 40px;
+          margin-left: 30px;
           display: inline-block;
           cursor: pointer;
           opacity: .4;
@@ -91,9 +93,10 @@ html {
     }
   }
   &.nav-collapse {
-    background: rgba(0, 0, 0, .9);
+    background: rgba(255, 255, 255, .8);
     .nav-left {
       .logo {
+        opacity: 1;
         height: 60px;
         .logo-img {
           width: 40px;
@@ -118,7 +121,7 @@ html {
   overflow: hidden;
   // width: 100%;
   height: 770px;
-  background: black url(../img/banner-bg.jpg) no-repeat;
+  background: black url(../img/bg.jpg) no-repeat;
   // background: black url(../img/home.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -129,69 +132,37 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, #000 100%)
+    // background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, #000 100%)
   }
-  .hero-cover {
-    margin-top: 210px;
-    float: left;
-    position: relative;
-    width: (900px/1.2);
-    height: (467px/1.2);
-    background: url(../img/cover.png) no-repeat;
-    background-size: cover;
-    background-position-x: -5px;
-  }
-  .hero-info {
-    position: absolute;
-    right: 0;
-    margin-right: -120px;
-    margin-top: 80px;
-    color: white;
-    .hero-info-title {
-      font-size: 50px;
-      font-weight: $thin;
-      line-height: 50px;
-      text-transform: uppercase;
+  .cover {
+    padding-top: 160px;
+    text-align: center;
+    .cover-logo {
+      .cover-logo-img {
+        width: 120px;
+      }
     }
-    .hero-info-desc {
-      font-size: 18px;
-      font-weight: $ultralight;
-      line-height: 48px;
-      margin: 10px auto 40px;
+    .cover-text {
+      margin-top: 20px;
+      display: block;
+      font-size: 44px;
+      font-weight: 300;
     }
-    .hero-info-links {
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-          margin-right: 20px;
-          display: inline-block;
-          height: 60px;
-          width: 60px;
-          cursor: pointer;
-          background-color: rgba(255, 255, 255, .1);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 32px;
-          border-radius: 72px;
-          a {
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-          }
-          &:hover {
-            background-color: rgba(0, 0, 0, .5);
-          }
-          &.github {
-            background-image: url(../img/github.png);
-          }
-          &.npm {
-            background-image: url(../img/npm.png);
-          }
-          &.issue {
-            background-image: url(../img/issue.png);
-          }
+    .cover-btns {
+      margin-top: 34px;
+      .cover-btn {
+        padding: 12px 35px;
+        display: inline-block;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #8173BC;
+        width: 120px;
+        height: 45px;
+        border: 2px solid #8173BC;
+        border-radius: 45px;
+        font-size: 14px;
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
@@ -303,11 +274,9 @@ html {
     background-color: #292957;
     font-family: Consolas;
     font-size: 14px;
-
     p {
       margin: 2px 0;
     }
-  
     &-block {
       margin-bottom: 20px;
       &:last-child {
@@ -593,13 +562,11 @@ html {
       padding: 20px 5px;
     }
   }
-
   .about {
     &-desc {
       padding: 0;
     }
   }
-
   .example {
     .example-item-list {
       .example-item {

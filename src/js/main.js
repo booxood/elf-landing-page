@@ -12,7 +12,7 @@ var preloader = new Preloader({
     './img/banner-bg.jpg',
     './img/cover.png',
   ],
-  perMinTime: 500,
+  perMinTime: 0,
   concurrency: 4
 })
 preloader.addProgressListener(function (loaded, length) {
