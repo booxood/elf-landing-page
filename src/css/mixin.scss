@@ -1,9 +1,6 @@
-$ultralight: 100;
-$thin: 300;
-$bold: 500;
-
-$blue: #6190E8;
-
+/**
+ * Mixins
+ */
 @mixin clearfix {
   &:after {
     content: "";

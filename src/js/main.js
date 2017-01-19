@@ -2,7 +2,7 @@ require('../index.html')
 window.$ = window.jQuery = require('jquery')
 require('waypoints/lib/jquery.waypoints.min.js')
 require('jquery-qrcode')
-require('../css/main.scss')
+require('../css/package.scss')
 var Preloader = require('preloader.js')
 
 
