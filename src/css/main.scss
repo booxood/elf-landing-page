@@ -357,7 +357,52 @@
   background-color: $color-bg-gray;
 
   .features {
+    margin: 0 auto;
+    font-size: 0;
+    width: 1140px;
+    height: 340px;
+  }
+  &-item {
+    display: inline-block;
+    width: 240px;
+    height: 340px;
+    float: left;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 0 40px;
+    list-style: none;
+    margin-right: 40px;
+    text-align: center;
 
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &-logo {
+    display: table;
+    width: 100%;
+    height: 170px;
+
+    .img-cnt {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    img {
+      // width: 100%;
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+  &-name {
+    font-size: 17px;
+    color: #2D2D2D;
+    margin-top: 10px;
+  }
+  &-desc {
+    margin: 24px auto 0;
+    width: 170px;
+    font-size: 14px;
+    color: #B8B8B8;
+    line-height: 1.4;
   }
 }
 
@@ -365,7 +410,71 @@
  * Component Section
  */
 .component {
-  background-color: #F8F8F8;
+  background-color: $color-white;
+
+  .components {
+    margin: 0 auto;
+    font-size: 0;
+    width: 1000px;
+    height: 340px;
+  }
+  &-item {
+    display: inline-block;
+    width: 220px;
+    height: 340px;
+    background-color: #fff;
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    transition: all .6s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.04) 0 10px 40px;
+      transform: translate3d(-4px, -4px, 0);
+    }
+  }
+  &-icon {
+    display: table;
+    width: 100%;
+    height: 160px;
+
+    .img-cnt {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+  &-name {
+    font-size: 17px;
+    color: #2D2D2D;
+    margin-top: 10px;
+  }
+  &-desc {
+    margin: 16px auto 0;
+    width: 170px;
+    font-size: 14px;
+    color: #B8B8B8;
+    line-height: 1.4;
+  }
+  &-btn {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #F4F4F4;
+    border-radius: 4px;
+    color: #202121;
+    font-size: 14px;
+    line-height: 50px;
+    text-decoration: none;
+    margin-top: 30px;
+  }
 }
 
 /**
