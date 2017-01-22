@@ -243,16 +243,19 @@
     // background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, #000 100%)
   }
   .cover {
-    padding-top: 160px;
+    padding-top: 220px;
     text-align: center;
+    color: $blue;
+    opacity: .8;
 
     .cover-logo {
+      margin-bottom: 20px;
       .cover-logo-img {
         width: 120px;
       }
     }
     .cover-text {
-      margin-top: 20px;
+      margin: 10px 0;
       display: block;
       font-size: 44px;
       font-weight: 300;
@@ -265,13 +268,16 @@
         display: inline-block;
         box-sizing: border-box;
         text-decoration: none;
-        color: #8173BC;
         width: 120px;
         height: 45px;
-        border: 2px solid #8173BC;
+        border: 2px solid $blue;
         border-radius: 45px;
         font-size: 14px;
+        color: $blue;
 
+        &:visited {
+          color: $blue;
+        }
         &:hover {
           opacity: 0.8;
         }
@@ -481,7 +487,7 @@
  * Example Section
  */
 .example {
-  background-color: white;
+  background-color: $color-bg-gray;
 
   .example-item-list {
     @include clearfix;
