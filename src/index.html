@@ -27,7 +27,7 @@
             <li data-url="feature">特性</li>
             <li data-url="component">组件</li>
             <li data-url="example">模板</li>
-            <li><a href="https://aotu.io">关注我们</a></li>
+            <li><a data-event="click_subscribe" data-redirect="https://aotu.io">关注我们</a></li>
           </ul>
           <div class="menu"></div>
         </div>
@@ -45,7 +45,7 @@
             <p class="cover-text">灵活可扩展的 HTML5 </p>
             <p class="cover-text">多场景应用模板</p>
             <div class="cover-btns">
-              <a class="cover-btn" href="https://github.com/o2team/elf">Github</a>
+              <a class="cover-btn" data-event="click_github_hero"  data-redirect="https://github.com/o2team/elf">Github</a>
             </div>
           </div>
         </div>
@@ -257,7 +257,7 @@
         <div class="footer-desc">
           <div class="footer-copyright">© 2016 Created by <a href="//aotu.io" target="_blank">凹凸实验室</a></div>
         </div>
-        <a href="https://github.com/o2team"><div class="github-logo"></div></a>
+        <a data-event="click_github_footer"  data-redirect="https://github.com/o2team"><div class="github-logo"></div></a>
       </div>
     </footer>
     <!-- E Footer -->
@@ -274,6 +274,18 @@
     </div>
   </div>
   <!-- E Loader -->
+  <script>
+      var _mtac = {};
+      (function() {
+        var mta = document.createElement("script");
+        mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.2";
+        mta.setAttribute("name", "MTAH5");
+        mta.setAttribute("sid", "500392891");
+        mta.setAttribute("cid", "500392892");
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(mta, s);
+      })();
+  </script>
 </body>
 
 </html>

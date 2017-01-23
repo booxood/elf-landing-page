@@ -21,3 +21,9 @@ html {
 .hide {
   display: none !important;
 }
+
+[data-redirect] {
+  &:hover {
+    cursor: pointer;
+  }
+}

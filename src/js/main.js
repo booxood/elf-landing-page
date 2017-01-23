@@ -125,6 +125,18 @@ function loadOver() {
   //     text: 'http://html5-panorama.aco.aotu.io'
   //   })
   // })
+
+  $('[data-redirect]').on('click', function (e) {
+    var $btn = $(e.currentTarget)
+    console.log('event:', $btn.data('event'))
+    if ($btn.data('event')) {
+      MtaH5 && MtaH5.clickStat($btn.data('event'))
+    }
+    setTimeout(function () {
+      // window.location.href = $btn.data('url')
+      console.log('ok')
+    }, 500)
+  })
 }
 
 
