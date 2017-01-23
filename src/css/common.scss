@@ -3,11 +3,21 @@
  */
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
+
 body {
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html {
   min-width: 960px;
+}
+
+.hide {
+  display: none !important;
 }

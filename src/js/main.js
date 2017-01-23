@@ -25,8 +25,11 @@ preloader.addCompletionListener(function () {
 
   loadOver()
 })
-preloader.start()
+// preloader.start()
 
+$('.wrapper').removeClass('hidden')
+$('.loader').addClass('over')
+loadOver()
 
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {
@@ -96,14 +99,32 @@ function loadOver() {
   })
 
   // qrcode
-  $('.qrcode').each(function (i, qr) {
-    var $qr = $(qr)
-    $qr.qrcode({
-      width: 200,
-      height: 200,
-      text: $qr.parents('.example-item').attr('href')
+  $('.example-item').on('click', function() {
+    var link = $(this).data('href')
+    var desc = $(this).data('desc')
+    var cli = $(this).data('cli')
+
+    $('.example-phone-qrcode').html('')
+    $('.example-phone-qrcode').qrcode({
+      width: 160,
+      height: 160,
+      text: link || 'https://aotu.io'
     })
+
+    $('.example-phone-logo').addClass('hide')
+    $('.example-phone-item').removeClass('hide')
+    $('.example-phone-desc').text(desc)
+    $('.example-phone-link').attr('href', link)
+    $('.example-phone-command').text(cli)
   })
+  // $('.example-item').each(function (i, qr) {
+  //   var $qr = $(qr)
+  //   $qr.qrcode({
+  //     width: 160,
+  //     height: 160,
+  //     text: 'http://html5-panorama.aco.aotu.io'
+  //   })
+  // })
 }
 
 
