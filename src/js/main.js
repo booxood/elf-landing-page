@@ -133,8 +133,7 @@ function loadOver() {
       MtaH5 && MtaH5.clickStat($btn.data('event'))
     }
     setTimeout(function () {
-      // window.location.href = $btn.data('url')
-      console.log('ok')
+      window.location.href = $btn.data('redirect')
     }, 500)
   })
 }
