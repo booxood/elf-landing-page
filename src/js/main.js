@@ -70,6 +70,7 @@ function loadOver() {
       scrollTop: $('#' + $anchor.attr('data-url')).offset().top - 60
     }, 1000)
     event.preventDefault()
+    window.MtaH5 && MtaH5.clickStat('click_navbar')
   })
 
   // navbar
@@ -116,6 +117,8 @@ function loadOver() {
     $('.example-phone-desc').text(desc)
     $('.example-phone-link').attr('href', link)
     $('.example-phone-command').text(cli)
+
+    window.MtaH5 && MtaH5.clickStat('click_template', {[cli.split(' ').pop()]: 'true'})
   })
   // $('.example-item').each(function (i, qr) {
   //   var $qr = $(qr)
@@ -130,7 +133,7 @@ function loadOver() {
     var $btn = $(e.currentTarget)
     console.log('event:', $btn.data('event'))
     if ($btn.data('event')) {
-      MtaH5 && MtaH5.clickStat($btn.data('event'))
+      window.MtaH5 && MtaH5.clickStat($btn.data('event'))
     }
     setTimeout(function () {
       window.location.href = $btn.data('redirect')
